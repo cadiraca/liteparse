@@ -69,9 +69,8 @@ Error bodies are `{"error": "<message>"}`.
 
 | Status | Cause |
 |---|---|
-| 400 | Empty body, missing `file` field, or unknown `format` |
+| 400 | Empty body, missing `file` field, unknown `format`, or upload over `MAX_UPLOAD_MB` (default 50) |
 | 401 | Missing or wrong API key |
-| 413 | Upload over `MAX_UPLOAD_MB` (default 50) |
 | 422 | Document could not be parsed or converted, e.g. `unsupported file format` for non-PDF bytes |
 
 ## Limits and gotchas
